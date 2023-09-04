@@ -3,3 +3,4 @@ flask-swagger
 opencv-python
 numpy
 matplotlib
+flask-cors

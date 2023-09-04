@@ -1,4 +1,6 @@
 from flask import Flask, request, make_response
+from flask_cors import CORS
+from math import floor
 import cv2
 import numpy as np
 import base64
@@ -6,6 +8,7 @@ import tools
 
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 @app.route("/")
 def index():
@@ -13,8 +16,10 @@ def index():
 
 @app.route("/api/id_photo", methods=["POST"])
 def id_photo():
-    photo_size = parse_inch_size_to_resolution(request.form.get("photo_size"))
-    paper_size = parse_inch_size_to_resolution(request.form.get("paper_size"))
+    print(request.form)
+    print(request.form.get("photoSize"))
+    photo_size = parse_cm_size_to_resolution(request.form.get("photoSize"))
+    paper_size = parse_cm_size_to_resolution(request.form.get("paperSize"))
     
     #  read encoded image
     image = request.files['photo'].read()

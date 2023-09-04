@@ -5,7 +5,7 @@
 4. 退出virtual environment: `deactivate`
 
 # Start
-1. `FLASK_APP=app.py flask run` 或者 `FLASK_DEBUG=1 python app.py`
+1. `FLASK_DEBUG=1 FLASK_APP=app.py flask run` 
 2. 
 
 
