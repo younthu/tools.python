@@ -1,0 +1,5 @@
+flask
+flask-swagger
+opencv-python
+numpy
+matplotlib
