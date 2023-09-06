@@ -3,6 +3,8 @@ FROM python:3.10-bullseye
 # Create app directory
 WORKDIR /app
  
+RUN apt-get update && apt-get install -y python3-opencv
+
 # Install app dependencies
 COPY requirements.txt ./
  
