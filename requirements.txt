@@ -1,6 +1,6 @@
-flask
-flask-swagger
-opencv-python
-numpy
-matplotlib
-flask-cors
+flask==2.3.3
+flask-swagger==0.2.14
+opencv-python==4.8.0.76
+numpy==1.25.2
+matplotlib==3.7.0
+flask-cors==4.0.0
